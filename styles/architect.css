@@ -129,11 +129,55 @@ main > section{
     max-width: 530px;
 }
 
-}
+
 #Quick-list{
     font-weight: 500;
 
 }
+/* feature section related styles */
+.features{
+    gap: 60px;
+    align-items: flex-start;
+    
+  
+    
+} 
+
+
+#features-section-title{
+    border-left: 5px solid #FF900E;
+    padding: 20px;
+   
+}
+.feature-paragrapgh{
+    width: 100%;
+}
+.feature-card{
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+      
+}
+.feature-image {
+  width: 100%;
+  height: 1000px;
+  width: 550px;
+  border-radius: 10px;
+  margin: 0 auto; 
+  
+}
+
+
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+
 /* fact related styles */
 .facts-container{
     display: grid;
