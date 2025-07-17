@@ -9,9 +9,21 @@
     "wdth" 100;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+
 /* shared styles */
+
+
 .display-flex{
     display: flex;
+}
+.text-primary{
+    color: #FF900E;
 }
 /* dark 02 */
 .text-gray{
@@ -26,12 +38,12 @@
     background-color: rgba(255, 144, 14, 0.1);
 }
 
-.container {
+/* .container {
   width: 100%;
   max-width: 1000px; 
   margin: 0 auto;
-  /* padding: 0 20px; optional spacing on small screens */
-}
+  padding: 0 20px; optional spacing on small screens */
+
 .btn-primary{
     background-color: #FF900E;
     color: white;
@@ -41,6 +53,17 @@
     border: none;
     border-radius: 8px;
 }
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+
 
 /* header styles */
 
@@ -64,11 +87,12 @@
     font-weight: 500;
 }
 
-/* .navbar, .banner {
+.navbar, .banner {
     
-    max-width: 1440px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
-}  */
+}  
 
 
 /* banner related styles */
@@ -87,11 +111,91 @@
     width: 100%;
 
 }
+/* team and feature related styles */
+.teams{
+    align-items: center;
+}
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.team-image-container img{
+    max-width: 100%;
+    height: auto;
+}
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
 
+}
+#Quick-list{
+    font-weight: 500;
+
+}
 /* responsive media query */
-@media screen and (max-width: 576px) {
-    .navbar, .nav-links{
+/* @media screen and (max-width: 576px) {
+    .navbar, .nav-links, .teams{
         flex-direction: column;
     }
+    .team-image-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .our-features{
+        margin-left: 20px;
+    }
+   .banner-title {
+    font-size: 2.5rem;
+    }
+} */
+
+@media screen and (max-width: 576px) {
+  .navbar, .nav-links, .teams {
+    flex-direction: column;
+  }
+
+  .team-image-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .our-features {
+    margin-left: 0; /* ✅ was causing overflow */
+    padding: 0 15px; /* ✅ add padding instead */
+  }
+
+  .banner-title {
+    font-size: 2rem; /* ✅ reduce large text size */
+    padding: 0 10px;
+  }
+
+  .banner-content {
+    padding: 0 10px; /* ✅ prevent content overflow */
+  }
+  
+
+}
+
+
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px ) {
+   .navbar{
+    flex-direction: column;
+    
+
+   }
+
+   .nav-links{
+    
+    padding-left: 0;
+   }
+   
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    } 
+
     
 }
